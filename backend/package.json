@@ -9,8 +9,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "expess": "^0.0.1-security",
+    "http-status": "^1.7.4",
     "mongoose": "^8.5.3",
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "socket.io": "^4.7.5"
   }
 }
