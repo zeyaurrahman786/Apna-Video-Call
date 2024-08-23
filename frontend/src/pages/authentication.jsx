@@ -17,35 +17,24 @@ import { Snackbar } from '@mui/material';
 
 
 
-// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
 export default function Authentication() {
-
-    
 
     const [username, setUsername] = React.useState();
     const [password, setPassword] = React.useState();
     const [name, setName] = React.useState();
     const [error, setError] = React.useState();
     const [message, setMessage] = React.useState();
-
-
     const [formState, setFormState] = React.useState(0);
-
     const [open, setOpen] = React.useState(false)
-
-
     const { handleRegister, handleLogin } = React.useContext(AuthContext);
 
     let handleAuth = async () => {
         try {
             if (formState === 0) {
-
                 let result = await handleLogin(username, password)
-
-
             }
             if (formState === 1) {
                 let result = await handleRegister(name, username, password);
@@ -58,7 +47,6 @@ export default function Authentication() {
                 setPassword("")
             }
         } catch (err) {
-
             console.log(err);
             let message = (err.response.data.message);
             setError(message);
@@ -76,7 +64,7 @@ export default function Authentication() {
                     sm={4}
                     md={7}
                     sx={{
-                        backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
+                        backgroundImage: 'url(https://media.istockphoto.com/id/1179811688/photo/finger-print-biometric-scanning-identification-system-businessman-scan-fingerprint-biometric.jpg?s=2048x2048&w=is&k=20&c=wHg43bkJg0ERQbWSMxJpXeuWY97PBxlPUjUhIoAFAZM=)',
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -97,7 +85,6 @@ export default function Authentication() {
                         <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                             <LockOutlinedIcon />
                         </Avatar>
-
 
                         <div>
                             <Button variant={formState === 0 ? "contained" : ""} onClick={() => { setFormState(0) }}>
@@ -131,7 +118,6 @@ export default function Authentication() {
                                 value={username}
                                 autoFocus
                                 onChange={(e) => setUsername(e.target.value)}
-
                             />
                             <TextField
                                 margin="normal"
@@ -142,7 +128,6 @@ export default function Authentication() {
                                 value={password}
                                 type="password"
                                 onChange={(e) => setPassword(e.target.value)}
-
                                 id="password"
                             />
 
@@ -164,7 +149,6 @@ export default function Authentication() {
             </Grid>
 
             <Snackbar
-
                 open={open}
                 autoHideDuration={4000}
                 message={message}
