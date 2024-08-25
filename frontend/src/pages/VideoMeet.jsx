@@ -125,9 +125,7 @@ export default function VideoMeetComponent() {
         if (video !== undefined && audio !== undefined) {
             getUserMedia();
             console.log("SET STATE HAS ", video, audio);
-
         }
-
 
     }, [video, audio])
     let getMedia = () => {
