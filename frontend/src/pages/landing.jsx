@@ -14,7 +14,7 @@ export default function LandingPage() {
                 </div>
                 <div className='navlist'>
                     <p onClick={() => {
-                        router("/aljk23")
+                        router("/zeyaur")
                     }}>Join as Guest</p>
                     <p onClick={() => {
                         router("/auth")
