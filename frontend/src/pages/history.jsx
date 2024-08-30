@@ -58,9 +58,7 @@ export default function History() {
 
                         <>
 
-
                             <Card key={i} variant="outlined">
-
 
                                 <CardContent>
                                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -73,9 +71,7 @@ export default function History() {
 
                                 </CardContent>
 
-
                             </Card>
-
 
                         </>
                     )
